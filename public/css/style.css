@@ -1,0 +1,53 @@
+/* GENERAL */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, serif;
+  font-size: 15px;
+}
+
+body {
+  max-width: 768px;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/* HEADER */
+.main-container {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+}
+.main-container__logo {
+  width: 164px;
+  height: 24px;
+}
+
+.locate {
+  height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: silver;
+  /* Trouver un moyen de le rendre plus gris */
+}
+.locate__igeo {
+  margin-right: 18px;
+}
+
+.explore {
+  height: 288px;
+  background: #F2F2F2;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.explore__btn {
+  height: 48px;
+}
+
+/*# sourceMappingURL=style.css.map */
