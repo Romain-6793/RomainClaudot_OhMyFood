@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* GENERAL */
 * {
   box-sizing: border-box;
@@ -6,8 +7,7 @@
 }
 
 body {
-  max-width: 768px;
-  border: 1px solid black;
+  max-width: 767px;
 }
 
 h1 {
@@ -16,10 +16,14 @@ h1 {
 
 /* HEADER */
 .main-container {
-  height: 64px;
+  max-height: 64px;
   display: flex;
   justify-content: center;
   padding-top: 22px;
+  padding-bottom: 22px;
+  box-shadow: -2px 2px 8px rgba(84, 84, 84, 0.4);
+  /*Je laisse ce souci de côté pour l'instant */
+  margin-bottom: 2px;
 }
 .main-container__logo {
   width: 164px;
@@ -32,8 +36,7 @@ h1 {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  background: silver;
-  /* Trouver un moyen de le rendre plus gris */
+  background: #eaeaea;
 }
 .locate__igeo {
   margin-right: 18px;
@@ -41,13 +44,105 @@ h1 {
 
 .explore {
   height: 288px;
-  background: #F2F2F2;
+  background: #f6f6f6;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  text-align: center;
+}
+.explore__fulltitle__title {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.explore__fulltitle__subtitle {
+  padding-left: 8%;
+  padding-right: 8%;
 }
 .explore__btn {
   height: 48px;
+  width: 218px;
+  border-radius: 30px;
+  background: linear-gradient(150deg, #FF79DA, #9356DC);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
+
+.stages {
+  max-height: 442px;
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 35px;
+  padding-left: 6%;
+}
+.stages__stage1 {
+  margin-top: 25px;
+}
+.stages__stage1__bloc1 {
+  top: 550px;
+}
+.stages__stage1__bloc2__icone1 {
+  margin-left: 9.5%;
+  margin-right: 5%;
+  color: #7e7e7e;
+}
+.stages__stage2__bloc1 {
+  top: 648px;
+}
+.stages__stage2__bloc2__icone2 {
+  margin-left: 9%;
+  margin-right: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  color: #7e7e7e;
+}
+.stages__stage3__bloc1 {
+  top: 747px;
+}
+.stages__stage3__bloc2__icone3 {
+  margin-left: 9%;
+  margin-right: 5%;
+  color: #7e7e7e;
+  font-size: 12px;
+}
+
+.marks, .bars {
+  font-size: 10px;
+}
+
+.marks {
+  margin-right: 1px;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  background: #9356DC;
+  border-radius: 30px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 5%;
+  z-index: 1;
+}
+
+.bubble {
+  width: 90%;
+  height: 76px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f6f6f6;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 22px;
+  box-shadow: 2px 2px 16px rgba(84, 84, 84, 0.4);
+  margin-left: 2%;
+}
+
+/* MAIN */
 
 /*# sourceMappingURL=style.css.map */
