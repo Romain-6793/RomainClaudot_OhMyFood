@@ -186,13 +186,40 @@ h1 {
   font-size: 20px;
 }
 
+/* FOOTER */
 .footer {
-  max-height: 250px;
+  height: 250px;
+  width: 100%;
   background: #353535;
   color: #ffffff;
-  padding-top: 26px;
+  padding-top: 10px;
+  padding-left: 6.5%;
   display: flex;
   flex-flow: column wrap;
+}
+.footer__footerlogo {
+  font-family: "Shrikhand", Arial, serif;
+  margin-bottom: 20px;
+}
+.footer__footerlist__propose, .footer__footerlist__partner {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+.footer__footerlist__propose__link, .footer__footerlist__partner__link {
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+.footericon {
+  position: absolute;
+  margin-right: 15px;
+  top: 2px;
+  font-size: 12px;
+}
+
+.footerlink {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

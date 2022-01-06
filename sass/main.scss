@@ -247,12 +247,51 @@ h1
 
 }
 
+/* FOOTER */
+
 .footer
 {
-    max-height: 250px;
+    height: 250px;
+    width: 100%;
     background: #353535;
     color: #ffffff;
-    padding-top: 26px;
+    padding-top: 10px;
+    padding-left: 6.5%;
     display: flex;
     flex-flow: column wrap;
+    &__footerlogo
+    {
+        font-family: 'Shrikhand', Arial, serif;
+        margin-bottom: 20px;
+    }
+    &__footerlist
+    {
+        &__propose, &__partner
+        {
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+            &__link
+            {
+                margin-left: 25px;
+                font-weight: bold;
+            }
+            
+        }
+        
+    }
 }
+
+.footericon
+{
+    position: absolute;
+    margin-right: 15px;
+    top: 2px;
+    font-size: 12px;
+}
+
+.footerlink
+{
+    margin-bottom: 10px;
+}
+
