@@ -1,0 +1,60 @@
+@import "../variables/variables.scss";
+
+.main-section
+{
+    max-height: 1230px;
+    background: #f6f6f6;
+    padding-top: 35px;
+    padding-left: 6%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.main-list__card
+{
+    height: 250px;
+    width: 94%;
+    background: #ffffff;
+    border-radius: 15px; 
+    margin-bottom: 18px;
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    @include box-shadow;
+    &__pic
+    {
+        height: 174px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }  
+    &__title
+    {
+        line-height: 0.5;
+        padding-left: 6%;
+        padding-top: 10px;
+    }
+    &__value-label
+    {
+        width: 78px;
+        height: 28px;
+        background: $color-tertiary;
+        position: absolute;
+        top: 5%;
+        left: 72.5%;
+        color: #008766;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+    }
+}
+
+.heart
+{
+    position: absolute;
+    left: 83%;
+    top: 77.5%;
+    font-size: 25px;
+}

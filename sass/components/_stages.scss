@@ -1,0 +1,106 @@
+@import "../variables/variables.scss";
+
+.stages
+{
+    max-height: 442px;
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 35px;
+    padding-left: 6%;
+    &__stage1
+    {
+        margin-top: 25px;
+
+        &__bloc1
+        {
+            top: 550px;
+        }
+        &__bloc2
+        {
+
+            &__icone1
+            {
+                margin-left: 9.5%;
+                margin-right: 5%;
+                color: #7e7e7e;
+            }
+        }
+        
+    }
+    &__stage2
+    {
+        &__bloc1
+        {
+            top: 648px;
+        }
+
+        &__bloc2
+        {
+                
+        
+            &__icone2
+            {
+                
+                margin-left: 9%;
+                margin-right: 5%;
+                display: flex;
+                flex-flow: row wrap;
+                color: #7e7e7e;
+                
+            }
+        }
+    }
+    &__stage3
+    {
+        margin-bottom: 50px;
+        &__bloc1
+        {
+            top: 747px;
+        }
+        &__bloc2
+        {
+            &__icone3
+            {
+                margin-left: 9%;
+                margin-right: 5%;
+                color: #7e7e7e;
+                font-size: 12px;
+            }
+
+        }
+    }
+
+}
+
+
+
+.circle
+{
+    width: 25px;
+    height: 25px;
+    background: $color-primary;
+    border-radius: 30px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+}
+
+.bubble
+{
+    width: 90%;
+    height: 76px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #f6f6f6;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 22px;
+    margin-left: 2%;
+    @include box-shadow;
+}

@@ -1,0 +1,74 @@
+@import "../variables/variables.scss";
+
+.banner
+{
+    max-height: 64px;
+    display: flex;
+    justify-content: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    box-shadow: -2px 2px 8px rgba(84,84,84,0.4); /*Je laisse ce souci de côté pour l'instant */
+    
+    
+    &__logo
+    {
+        width: 164px;
+        height: 24px;
+    }
+}
+
+.shadow
+{
+    height: 3px;
+    background:linear-gradient (90,rgba(84,84,84,0.4), #eaeaea);
+}
+
+.locate
+{
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background: #eaeaea;
+    &__igeo
+    {
+        margin-right: 18px;
+    }
+}
+
+.explore
+{
+    height: 288px;
+    background: #f6f6f6;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    
+    &__fulltitle
+    {
+        &__title
+        {
+            padding-left: 18%; 
+            padding-right: 18%;
+        }
+
+        &__subtitle
+        {
+            padding-left: 8%; 
+            padding-right: 8%;
+        }
+
+    }
+    &__btn
+    {
+        height: 48px;
+        width: 218px;
+        border-radius: 30px;
+        background: linear-gradient(150deg, $color-secondary, $color-primary);
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+}
