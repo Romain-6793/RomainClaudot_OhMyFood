@@ -97,14 +97,6 @@
   font-size: 12px;
 }
 
-.marks, .bars {
-  font-size: 10px;
-}
-
-.marks {
-  margin-right: 1px;
-}
-
 .circle {
   width: 25px;
   height: 25px;

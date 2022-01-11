@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css" />
     <link rel="stylesheet" href="../public/css/normalize.css" />
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="../public/css/menus.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
@@ -18,90 +18,127 @@
 
 <body>
     <header>
-        <i class="fas fa-arrow-left"></i>
-        <div class="main-container">
-            <img class="main-container__logo" alt="ohmyfood" src="../public/img/ohmyfood.png">
+        <i class="fas fa-arrow-left left"></i>
+        <div class="headband">
+            <img class="headband__logo" alt="ohmyfood" src="../public/img/ohmyfood.png">
         </div>
-        <!--<img class="restaurants__restolist__palette__picpalette" alt="palette" src="public/img/palette.jpg">-->
-        <h1>Le délice des sens</h1>
-        <i class="far fa-heart"></i>
+        <img class="picture" alt="palette" src="../public/img/délice.jpg">
     </header>
-    <main>
-        <!--Attention à la standarisation-->
-        <section class="section appetizer">
-            <h1>ENTRÉES</h1>
-            <div class="section__block">
-                <h3>Tartare de thon</h3>
-                <p>Assaisonné au yuzu</p>
-                <span>25&euro;</span>
+    <main class="bigblock">
+        <div class="bigblock__headband">
+            <h1 class="bigblock__headband__title">Le délice des sens</h1>
+            <i class="far fa-heart bigblock__headband__icon"></i>
+        </div>
+        <section class="section">
+            <div class="section__fulltitle">
+                <h2 class="section__fulltitle__title">ENTRÉES</h2>
+                <div class="section__fulltitle__underline"></div>
             </div>
             <div class="section__block">
-                <h3>Bouchée de homard croustillant</h3>
-                <p>Et sa farandole de petits légumes</p>
-                <span>35&euro;</span>
+                <span class="section__block__fulltext starter">
+                    <h3>Tartare de thon</h3>
+                    <span>Assaisonné au yuzu</span>
+                </span>
+                <span class="section__block__price">25&euro;</span>
             </div>
             <div class="section__block">
-                <h3>Velouté de cèpes</h3>
-                <p>Aux truffes</p>
-                <span>20&euro;</span>
+                <span class="section__block__fulltext starter">
+                    <h3>Bouchée de homard croustillant</h3>
+                    <span>Et sa farandole de petits légumes</span>
+                </span>
+                <span class="section__block__price">35&euro;</span>
             </div>
-        </section>
-        <section class="section dish">
-            <h1>PLATS</h1>
-            <div class="section__block">
-                <h3>Poulet rôti aux herbes de Provence</h3>
-                <p>Et sa crème de truffe</p>
-                <span>40&euro;</span>
-            </div>
-            <div class="section__block">
-                <h3>Langouste rôtie</h3>
-                <p>Et ses légumes de saison</p>
-                <span>35&euro;</span>
-            </div>
-            <div class="section__block">
-                <h3>Côte de boeuf angus</h3>
-                <p>Et sa purée de panais</p>
-                <span>44&euro;</span>
+            <div class="section__block lastblock">
+                <span class="section__block__fulltext starter">
+                    <h3>Velouté de cèpes</h3>
+                    <span>Aux truffes</span>
+                </span>
+                <span class="section__block__price">20&euro;</span>
             </div>
         </section>
-        <section class="section dessert">
-            <h2>DESSERTS</h2>
-            <div class="section__block">
-                <h3>Farandole de desserts</h3>
-                <p>Du chef</p>
-                <span>18&euro;</span>
+        <section class="section">
+            <div class="section__fulltitle">
+                <h2 class="section__fulltitle__title">PLATS</h2>
+                <div class="section__fulltitle__underline"></div>
             </div>
             <div class="section__block">
-                <h3>Crème brûlée</h3>
-                <p>Revisitée</p>
-                <span>22&euro;</span>
+                <span class="section__block__fulltext">
+                    <h3>Poulet rôti aux herbes de Provence</h3>
+                    <p>Et sa crème de truffe</p>
+                </span>
+                <span class="section__block__price">40&euro;</span>
             </div>
             <div class="section__block">
-                <h3>Tiramisu</h3>
-                <p>À la noisette</p>
-                <span>23&euro;</span>
+                <span class="section__block__fulltext">
+                    <h3>Langouste rôtie</h3>
+                    <p>Et ses légumes de saison</p>
+                </span>
+                <span class="section__block__price">35&euro;</span>
+            </div>
+            <div class="section__block lastblock">
+                <span class="section__block__fulltext">
+                    <h3>Côte de boeuf angus</h3>
+                    <p>Et sa purée de panais</p>
+                </span>
+                <span class="section__block__price">44&euro;</span>
             </div>
         </section>
-        <button type="submit" class="explore__btn" value="Order"> Commander </button>
+        <section class="section">
+            <div class="section__fulltitle">
+                <h2 class="section__fulltitle__title">DESSERTS</h2>
+                <div class="section__fulltitle__underline"></div>
+            </div>
+            <div class="section__block">
+                <span class="section__block__fulltext">
+                    <h3>Farandole de desserts</h3>
+                    <p>Du chef</p>
+                </span>
+                <span class="section__block__price">18&euro;</span>
+            </div>
+            <div class="section__block">
+                <span class="section__block__fulltext">
+                    <h3>Crème brûlée</h3>
+                    <p>Revisitée</p>
+                </span>
+                <span class="section__block__price">22&euro;</span>
+            </div>
+            <div class="section__block verylastblock">
+                <span class="section__block__fulltext">
+                    <h3>Tiramisu</h3>
+                    <p>À la noisette</p>
+                </span>
+                <span class="section__block__price">23&euro;</span>
+            </div>
+        </section>
+        <div class="order">
+            <button type="submit" class="order__btn" value="Order"> Commander </button>
+        </div>
     </main>
-    <footer>
-        <h2 class="footerlogo">ohmyfood</h2>
-        <div class="footerlist">
-            <!--Les 2 premiers liens sont en gras-->
-            <a>
-                <i class="fas fa-utensils"></i>
-                <p>Proposer un restaurant</p>
-            </a>
-            <a>
-                <i class="fas fa-hands-helping"></i>
-                <p>Devenir partenaire</p>
-            </a>
-            <a>
-                <p>Mentions légales</p>
-            </a>
-            <a>
-                <p>Contact</p>
-            </a>
+    <footer class="footer">
+        <h2 class="footer__footerlogo">ohmyfood</h2>
+        <div class="footer__footerlist">
+            <div class="footer__footerlist__propose">
+                <i class="fas fa-utensils footericon"></i>
+                <a class="footer__footerlist__propose__link footerlink">
+                    <span>Proposer un restaurant</span>
+                </a>
+            </div>
+            <div class="footer__footerlist__partner">
+                <i class="fas fa-hands-helping footericon"></i>
+                <a class="footer__footerlist__partner__link footerlink">
+                    <span>Devenir partenaire</span>
+                </a>
+            </div>
+            <div class="footer__footerlist__mentions footerlink">
+                <a>
+                    <span>Mentions légales</span>
+                </a>
+            </div>
+            <div class="footer__footerlist__contact footerlink">
+                <a>
+                    <span>Contact</span>
+                </a>
+            </div>
         </div>
     </footer>
 </body>

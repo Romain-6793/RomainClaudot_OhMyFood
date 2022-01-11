@@ -70,5 +70,6 @@
         color: #ffffff;
         border: none;
         cursor: pointer;
+        @include box-shadow;
     }
 }
