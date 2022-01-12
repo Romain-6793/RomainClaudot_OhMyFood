@@ -1,12 +1,250 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, serif;
+  font-size: 15px;
+}
+
+body {
+  max-width: 767px;
+  /* TABLETTE */
+  /*DESKTOP */
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  body {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (min-width: 991px) and (max-width: 1921px) {
+  body {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .page {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1921px) {
+  .page {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .bigblock, .footer2 {
+    max-width: 80%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1921px) {
+  .bigblock, .footer2 {
+    max-width: 70%;
+  }
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+header {
+  position: relative;
+}
+
+.headband {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.headband__logo {
+  width: 164px;
+  height: 24px;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 26px;
+  left: 22px;
+}
+.left-arrow:hover {
+  color: #9356DC;
+}
+
+.picture {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bigblock {
+  height: 1196px;
+  width: 100%;
+  background: #f6f6f6;
+  padding-top: 20px;
+  padding-left: 4%;
+  padding-right: 4%;
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  top: 240px;
+}
+.bigblock__headband {
+  position: relative;
+}
+.bigblock__headband__title {
+  font-family: "Shrikhand", Arial, serif;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.bigblock__headband__icon {
+  font-size: 25px;
+  position: absolute;
+  top: 1px;
+  left: 85%;
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .bigblock__headband__icon {
+    left: 90%;
+  }
+}
+@media all and (min-width: 991px) and (max-width: 1921px) {
+  .bigblock__headband__icon {
+    left: 92%;
+  }
+}
+
+.bigblocknote {
+  height: 1280px;
+}
+
+.section__fulltitle {
+  line-height: 0.3;
+  margin-bottom: 14px;
+}
+.section__fulltitle__underline {
+  background: #99E2D0;
+  width: 40px;
+  height: 3px;
+}
+.section__block {
+  background: #ffffff;
+  height: 70px;
+  width: 100%;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 4%;
+  box-shadow: 2px 2px 12px silver;
+}
+.section__block__fulltext {
+  line-height: 0.3;
+  padding-right: 22%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  max-width: 500px;
+  min-height: 50px;
+}
+.section__block__price {
+  position: absolute;
+  left: 85%;
+  top: 40px;
+  font-weight: bold;
+}
+@media all and (min-width: 768px) and (max-width: 1921px) {
+  .section__block__price {
+    left: 90%;
+  }
+}
+
+.lastblock {
+  margin-bottom: 46px;
+}
+
+.verylastblock {
+  margin-bottom: 50px;
+}
+
+/*.starter
+{
+    position: absolute; 
+    bottom: 20px;
+}*/
+.order {
+  display: flex;
+  justify-content: center;
+}
+.order__btn {
+  height: 48px;
+  width: 170px;
+  border-radius: 30px;
+  background: linear-gradient(150deg, #FF79DA, #9356DC);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 12px silver;
+}
+
+.footer2 {
+  height: 200px;
+  width: 100%;
+  background: #353535;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-left: 6.5%;
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  top: 1430px;
+}
+.footer2__footerlogo {
+  font-family: "Shrikhand", Arial, serif;
+  margin-bottom: 20px;
+  letter-spacing: 0.8px;
+}
+.footer2__footerlist__propose, .footer2__footerlist__partner {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+.footer2__footerlist__propose__link, .footer2__footerlist__partner__link {
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+.footernote {
+  top: 1514px;
+}
+
+.footericon {
+  position: absolute;
+  margin-right: 15px;
+  top: 2px;
+  font-size: 12px;
+}
+
+.footerlink {
+  margin-bottom: 10px;
+}
+
 .banner {
   max-height: 64px;
   display: flex;
   justify-content: center;
   padding-top: 22px;
   padding-bottom: 22px;
-  box-shadow: -2px 2px 8px rgba(84, 84, 84, 0.4);
-  /*Je laisse ce souci de côté pour l'instant */
 }
 .banner__logo {
   width: 164px;
@@ -14,8 +252,8 @@
 }
 
 .shadow {
-  height: 3px;
-  background: linear-gradient 90, rgba(84, 84, 84, 0.4), #eaeaea;
+  height: 2px;
+  background: rgba(105, 105, 105, 0.5);
 }
 
 .locate {
@@ -25,6 +263,7 @@
   justify-content: center;
   align-items: center;
   background: #eaeaea;
+  box-shadow: 0 5px 5px -5px dimgrey inset;
 }
 .locate__igeo {
   margin-right: 18px;
@@ -54,6 +293,7 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+  box-shadow: 2px 2px 12px silver;
 }
 
 .stages {
@@ -80,8 +320,6 @@
 .stages__stage2__bloc2__icone2 {
   margin-left: 9%;
   margin-right: 5%;
-  display: flex;
-  flex-flow: row wrap;
   color: #7e7e7e;
 }
 .stages__stage3 {
@@ -94,7 +332,6 @@
   margin-left: 9%;
   margin-right: 5%;
   color: #7e7e7e;
-  font-size: 12px;
 }
 
 .circle {
@@ -110,6 +347,11 @@
   left: 5%;
   z-index: 1;
 }
+@media all and (min-width: 768px) and (max-width: 1921px) {
+  .circle {
+    left: 6%;
+  }
+}
 
 .bubble {
   width: 90%;
@@ -123,7 +365,14 @@
   z-index: 0;
   margin-bottom: 22px;
   margin-left: 2%;
-  box-shadow: 2px 2px 16px rgba(84, 84, 84, 0.4);
+  box-shadow: 2px 2px 12px silver;
+}
+.bubble:hover {
+  background: #f5edff;
+  cursor: pointer;
+}
+.bubble:hover .stageicon {
+  color: #9356DC;
 }
 
 .main-section {
@@ -133,6 +382,8 @@
   padding-left: 6%;
   display: flex;
   flex-flow: column wrap;
+  padding-bottom: 42px;
+  /* Voir si le changement a opéré */
 }
 
 .main-list__card {
@@ -144,7 +395,7 @@
   display: flex;
   flex-flow: column wrap;
   position: relative;
-  box-shadow: 2px 2px 16px rgba(84, 84, 84, 0.4);
+  box-shadow: 2px 2px 12px silver;
 }
 .main-list__card__pic {
   height: 174px;
@@ -171,12 +422,37 @@
   align-items: center;
   border-radius: 2px;
 }
+@media all and (max-width: 320px) {
+  .main-list__card__value-label {
+    left: 68%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 990px) {
+  .main-list__card__value-label {
+    left: 82.5%;
+  }
+}
+@media all and (min-width: 991px) and (max-width: 1921px) {
+  .main-list__card__value-label {
+    left: 85%;
+  }
+}
 
 .heart {
   position: absolute;
   left: 83%;
   top: 77.5%;
   font-size: 25px;
+  /*&:hover  Revenir sur ce problème plus tard, à mon avis c'est réglable avec FA 
+  {
+      background: linear-gradient(0deg, $color-secondary, $color-primary);
+      cursor: pointer;
+  }*/
+}
+@media all and (min-width: 768px) and (max-width: 1921px) {
+  .heart {
+    left: 90%;
+  }
 }
 
 .footer {
@@ -192,6 +468,7 @@
 .footer__footerlogo {
   font-family: "Shrikhand", Arial, serif;
   margin-bottom: 20px;
+  letter-spacing: 0.8px;
 }
 .footer__footerlist__propose, .footer__footerlist__partner {
   display: flex;
@@ -213,6 +490,17 @@
 .footerlink {
   margin-bottom: 10px;
 }
+.footerlink:visited {
+  color: #ffffff;
+}
+.footerlink:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
+.footerlink:hover .footericon {
+  color: #9356DC;
+  cursor: pointer;
+}
 
 /* GENERAL */
 * {
@@ -223,10 +511,58 @@
 
 body {
   max-width: 767px;
+  /* TABLETTE */
+  /*DESKTOP */
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  body {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (min-width: 991px) and (max-width: 1920px) {
+  body {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
+
+a:hover .footericon {
+  color: #9356DC;
+  cursor: pointer;
 }
 
 h1 {
   font-size: 24px;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .mainpage {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1921px) {
+  .mainpage {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

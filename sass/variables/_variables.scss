@@ -3,7 +3,9 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+
 @mixin box-shadow
 {
-    box-shadow: 2px 2px 16px rgba(84,84,84,0.4);
+    box-shadow: 2px 2px 12px silver;
 }
+

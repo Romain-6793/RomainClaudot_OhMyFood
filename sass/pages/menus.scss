@@ -10,8 +10,44 @@
 body
 {
     max-width: 767px;
-    
-    
+    /* TABLETTE */
+    @media all and (min-width:768px) and (max-width:991px)
+    {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    /*DESKTOP */
+    @media all and (min-width:991px) and (max-width:1921px)
+    {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.page
+{
+    @media all and (min-width:768px) and (max-width:991px)
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    @media all and (min-width:992px) and (max-width:1921px)
+    {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+.bigblock, .footer2
+{
+    @media all and (min-width:768px) and (max-width:991px)
+    {
+        max-width: 80%;
+    }
+    @media all and (min-width:992px) and (max-width:1921px)
+    {
+        max-width: 70%;
+    }
 }
 
 h1
@@ -24,15 +60,19 @@ h2
     font-weight: normal;
 }
 
+header
+{
+    position: relative;
+}
+
 .headband
 {
-    max-height: 64px;
+    height: 64px;
     display: flex;
     justify-content: center;
     padding-top: 22px;
     padding-bottom: 22px;
-    position: relative;
- 
+    
     &__logo
     {
         width: 164px;
@@ -40,11 +80,15 @@ h2
     }
 }
 
-.left
+.left-arrow
 {
     position: absolute;
     top: 26px;
     left: 22px;
+    &:hover
+    {
+        color: $color-primary;
+    }
 }
 
 .picture
@@ -52,7 +96,7 @@ h2
     height: 220px;
     width: 100%;
     object-fit: cover;
-    position: relative;
+    
 }
 
 .bigblock
@@ -73,6 +117,7 @@ h2
     {
         font-family: 'Shrikhand', Arial, serif;
         margin-bottom: 40px;
+        letter-spacing: 1px;
     }
         &__icon
     {
@@ -80,9 +125,21 @@ h2
         position: absolute;
         top: 1px;
         left: 85%;
+        @media all and (min-width:768px) and (max-width:991px)
+        {
+            left: 90%;
+        }
+        @media all and (min-width:991px) and (max-width:1921px)
+        {
+            left: 92%;
+        }
     }
     }
-    
+}
+
+.bigblocknote
+{
+    height: 1280px;
 }
 
 .section
@@ -114,6 +171,13 @@ h2
         &__fulltext
         {
            line-height: 0.3;
+           padding-right: 22%;
+           overflow: hidden;   
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            max-width: 500px;
+            min-height: 50px;
         }
         &__price
         {
@@ -121,8 +185,11 @@ h2
             left: 85%;
             top: 40px;
             font-weight: bold;
+            @media all and (min-width:768px) and (max-width:1921px)
+            {
+                left: 90%;
+            } 
         }
-
     }
 
 }
@@ -137,11 +204,11 @@ h2
     margin-bottom: 50px;
 }
 
-.starter
+/*.starter
 {
     position: absolute; 
     bottom: 20px;
-}
+}*/
 
 .order
 {
@@ -160,7 +227,7 @@ h2
     }
 }
 
-.footer
+.footer2
 {
     height: 200px;
     width: 100%;
@@ -176,6 +243,7 @@ h2
     {
         font-family: 'Shrikhand', Arial, serif;
         margin-bottom: 20px;
+        letter-spacing: 0.8px;
     }
     &__footerlist
     {
@@ -195,6 +263,11 @@ h2
     }
 }
 
+.footernote
+{
+    top: 1514px;
+}
+
 .footericon
 {
     position: absolute;
@@ -207,3 +280,6 @@ h2
 {
     margin-bottom: 10px;
 }
+
+
+

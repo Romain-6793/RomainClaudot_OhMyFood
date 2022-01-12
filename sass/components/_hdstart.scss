@@ -7,9 +7,7 @@
     justify-content: center;
     padding-top: 22px;
     padding-bottom: 22px;
-    box-shadow: -2px 2px 8px rgba(84,84,84,0.4); /*Je laisse ce souci de côté pour l'instant */
-    
-    
+
     &__logo
     {
         width: 164px;
@@ -19,8 +17,8 @@
 
 .shadow
 {
-    height: 3px;
-    background:linear-gradient (90,rgba(84,84,84,0.4), #eaeaea);
+    height: 2px;
+    background:rgba(105,105,105,0.5);
 }
 
 .locate
@@ -31,6 +29,7 @@
     justify-content: center;
     align-items: center;
     background: #eaeaea;
+    box-shadow: 0 5px 5px -5px dimgrey inset;
     &__igeo
     {
         margin-right: 18px;

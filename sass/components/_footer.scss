@@ -14,6 +14,7 @@
     {
         font-family: 'Shrikhand', Arial, serif;
         margin-bottom: 20px;
+        letter-spacing: 0.8px;
     }
     &__footerlist
     {
@@ -44,4 +45,18 @@
 .footerlink
 {
     margin-bottom: 10px;
+    &:visited
+    {
+        color: #ffffff;
+    }
+    &:hover
+    {
+        color: $color-primary;
+        cursor: pointer;
+    }  
+    &:hover .footericon
+    {
+        color: $color-primary;
+        cursor: pointer;
+    }
 }

@@ -6,6 +6,44 @@
 
 body {
   max-width: 767px;
+  /* TABLETTE */
+  /*DESKTOP */
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  body {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (min-width: 991px) and (max-width: 1921px) {
+  body {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .page {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1921px) {
+  .page {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .bigblock, .footer2 {
+    max-width: 80%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1921px) {
+  .bigblock, .footer2 {
+    max-width: 70%;
+  }
 }
 
 h1 {
@@ -16,30 +54,35 @@ h2 {
   font-weight: normal;
 }
 
+header {
+  position: relative;
+}
+
 .headband {
-  max-height: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   padding-top: 22px;
   padding-bottom: 22px;
-  position: relative;
 }
 .headband__logo {
   width: 164px;
   height: 24px;
 }
 
-.left {
+.left-arrow {
   position: absolute;
   top: 26px;
   left: 22px;
+}
+.left-arrow:hover {
+  color: #9356DC;
 }
 
 .picture {
   height: 220px;
   width: 100%;
   object-fit: cover;
-  position: relative;
 }
 
 .bigblock {
@@ -59,12 +102,27 @@ h2 {
 .bigblock__headband__title {
   font-family: "Shrikhand", Arial, serif;
   margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 .bigblock__headband__icon {
   font-size: 25px;
   position: absolute;
   top: 1px;
   left: 85%;
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .bigblock__headband__icon {
+    left: 90%;
+  }
+}
+@media all and (min-width: 991px) and (max-width: 1921px) {
+  .bigblock__headband__icon {
+    left: 92%;
+  }
+}
+
+.bigblocknote {
+  height: 1280px;
 }
 
 .section__fulltitle {
@@ -86,16 +144,28 @@ h2 {
   position: relative;
   margin-bottom: 14px;
   padding-left: 4%;
-  box-shadow: 2px 2px 16px rgba(84, 84, 84, 0.4);
+  box-shadow: 2px 2px 12px silver;
 }
 .section__block__fulltext {
   line-height: 0.3;
+  padding-right: 22%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  max-width: 500px;
+  min-height: 50px;
 }
 .section__block__price {
   position: absolute;
   left: 85%;
   top: 40px;
   font-weight: bold;
+}
+@media all and (min-width: 768px) and (max-width: 1921px) {
+  .section__block__price {
+    left: 90%;
+  }
 }
 
 .lastblock {
@@ -106,11 +176,11 @@ h2 {
   margin-bottom: 50px;
 }
 
-.starter {
-  position: absolute;
-  bottom: 20px;
-}
-
+/*.starter
+{
+    position: absolute; 
+    bottom: 20px;
+}*/
 .order {
   display: flex;
   justify-content: center;
@@ -123,10 +193,10 @@ h2 {
   color: #ffffff;
   border: none;
   cursor: pointer;
-  box-shadow: 2px 2px 16px rgba(84, 84, 84, 0.4);
+  box-shadow: 2px 2px 12px silver;
 }
 
-.footer {
+.footer2 {
   height: 200px;
   width: 100%;
   background: #353535;
@@ -138,18 +208,23 @@ h2 {
   position: absolute;
   top: 1430px;
 }
-.footer__footerlogo {
+.footer2__footerlogo {
   font-family: "Shrikhand", Arial, serif;
   margin-bottom: 20px;
+  letter-spacing: 0.8px;
 }
-.footer__footerlist__propose, .footer__footerlist__partner {
+.footer2__footerlist__propose, .footer2__footerlist__partner {
   display: flex;
   flex-flow: row wrap;
   position: relative;
 }
-.footer__footerlist__propose__link, .footer__footerlist__partner__link {
+.footer2__footerlist__propose__link, .footer2__footerlist__partner__link {
   margin-left: 25px;
   font-weight: bold;
+}
+
+.footernote {
+  top: 1514px;
 }
 
 .footericon {

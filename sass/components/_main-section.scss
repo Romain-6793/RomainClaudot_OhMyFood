@@ -8,6 +8,7 @@
     padding-left: 6%;
     display: flex;
     flex-flow: column wrap;
+    padding-bottom: 42px; /* Voir si le changement a opéré */
 }
 
 .main-list__card
@@ -48,6 +49,18 @@
         justify-content: center;
         align-items: center;
         border-radius: 2px;
+        @media all and (max-width: 320px)
+        {
+            left: 68%;
+        }
+        @media all and (min-width:768px) and (max-width:990px)
+        {
+            left: 82.5%;  
+        }
+        @media all and (min-width:991px) and (max-width:1921px)
+        {
+            left: 85%;  
+        }
     }
 }
 
@@ -57,4 +70,14 @@
     left: 83%;
     top: 77.5%;
     font-size: 25px;
+    /*&:hover  Revenir sur ce problème plus tard, à mon avis c'est réglable avec FA 
+    {
+        background: linear-gradient(0deg, $color-secondary, $color-primary);
+        cursor: pointer;
+    }*/
+    @media all and (min-width:768px) and (max-width:1921px)
+    {
+        left: 90%;  
+    }
 }
+
