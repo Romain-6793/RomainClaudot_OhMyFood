@@ -35,6 +35,7 @@ body
 a
 {
     text-decoration: none;
+    color: black;
     &:visited
     {
         color: black;
@@ -42,15 +43,12 @@ a
     }
     &:hover 
     {
-        color: $color-primary;
         cursor: pointer;
     }  
-}
-
-a:hover .footericon
-{
-    color: $color-primary;
-    cursor: pointer;
+    &:hover .main-list__card__title 
+    {
+        color: $color-primary;
+    }
 }
 
 h1
@@ -65,6 +63,11 @@ h2
 
 .mainpage
 {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 6s;
+    animation-name: animatebottom;
+    animation-duration: 6s;
     @media all and (min-width:768px) and (max-width:991px)
     {
         margin-left: 10%;
@@ -77,4 +80,43 @@ h2
     }
 }
 
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
 
+.loader
+{
+    border: 16px solid #eaeaea; 
+    border-top: 16px solid $color-tertiary; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin linear 1 forwards;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 0.5s;
+    animation: spin linear 1 forwards;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    position: absolute;
+    left: 44%;
+    top: 50%;
+    z-index: 1;
+  }
+
+  @-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    99% { transform: rotate(360deg); }
+    100% { transform: translateX(-9999px); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    99% { transform: rotate(360deg); }
+    100% { transform: translateX(-9999px); }
+  }

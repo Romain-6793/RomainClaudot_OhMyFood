@@ -22,6 +22,21 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+a:hover .main-list__card__title {
+  color: #9356DC;
+}
+
 @media all and (min-width: 768px) and (max-width: 991px) {
   .page {
     margin-left: 10%;
@@ -140,11 +155,26 @@ header {
   width: 100%;
   border-radius: 18px;
   display: flex;
-  align-items: center;
+  flex-flow: column wrap;
+  justify-content: center;
   position: relative;
   margin-bottom: 14px;
   padding-left: 4%;
   box-shadow: 2px 2px 12px silver;
+  cursor: pointer;
+  overflow: hidden;
+}
+.section__block:hover .checked {
+  transform: translateX(-60px);
+  transition: transform 0.7s;
+}
+.section__block:hover .checked__circle {
+  transform: rotate(360deg);
+  transition: transform 0.7s;
+}
+.section__block:hover .section__block__price {
+  transform: translateX(-200%);
+  transition: transform 0.7s;
 }
 .section__block__fulltext {
   line-height: 0.3;
@@ -176,11 +206,30 @@ header {
   margin-bottom: 50px;
 }
 
-/*.starter
-{
-    position: absolute; 
-    bottom: 20px;
-}*/
+.checked {
+  height: 70px;
+  width: 60px;
+  background: #99E2D0;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 18px 18px 0;
+  position: absolute;
+  right: -60px;
+}
+.checked__circle {
+  background: #ffffff;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: #99E2D0;
+  font-size: 14px;
+}
+
 .order {
   display: flex;
   justify-content: center;
@@ -194,6 +243,10 @@ header {
   border: none;
   cursor: pointer;
   box-shadow: 2px 2px 12px silver;
+}
+.order__btn:hover {
+  background: linear-gradient(150deg, #ff83dd 50%, #985ede 100%);
+  box-shadow: 4px 4px 4px silver;
 }
 
 .footer2 {
@@ -235,7 +288,102 @@ header {
 }
 
 .footerlink {
+  color: #ffffff;
   margin-bottom: 10px;
+}
+.footerlink:visited {
+  color: #ffffff;
+}
+.footerlink:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
+.footerlink:hover .footericon {
+  color: #9356DC;
+  cursor: pointer;
+}
+
+/* ANIMATION DES BLOCKS */
+.block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10 {
+  -webkit-animation-name: animateblock;
+  animation-name: animateblock;
+}
+
+.block1 {
+  animation-duration: 1.5s;
+}
+
+.block2 {
+  animation-duration: 2s;
+}
+
+.block3 {
+  animation-duration: 2.5s;
+}
+
+.block4 {
+  animation-duration: 3s;
+}
+
+.block5 {
+  animation-duration: 3.5s;
+}
+
+.block6 {
+  animation-duration: 4s;
+}
+
+.block7 {
+  animation-duration: 4.5s;
+}
+
+.block8 {
+  animation-duration: 5s;
+}
+
+.block9 {
+  animation-duration: 5.5s;
+}
+
+.block10 {
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes animateblock {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  50% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  75% {
+    bottom: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateblock {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  50% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  75% {
+    bottom: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=menus.css.map */

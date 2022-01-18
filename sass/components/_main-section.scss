@@ -64,20 +64,45 @@
     }
 }
 
-.heart
+.fullheart
 {
+    /*
     position: absolute;
+    width: 25px;
+    height: 25px; 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
     left: 83%;
-    top: 77.5%;
-    font-size: 25px;
+    top: 77.5%;*/
     /*&:hover  Revenir sur ce problème plus tard, à mon avis c'est réglable avec FA 
     {
-        background: linear-gradient(0deg, $color-secondary, $color-primary);
         cursor: pointer;
     }*/
+    &__heart1
+    {
+        font-size: 25px;
+    }
+    &__heart2
+    {
+        font-size: 25px;
+        background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%); 
+        background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%); 
+        background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color:transparent
+    }
+    
     @media all and (min-width:768px) and (max-width:1921px)
     {
         left: 90%;  
     }
+    
 }
+
+
+
+    
 

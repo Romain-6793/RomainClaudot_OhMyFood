@@ -2,10 +2,18 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-
+$color-icon: linear-gradient(150deg, $color-secondary, $color-primary);
 
 @mixin box-shadow
 {
     box-shadow: 2px 2px 12px silver;
 }
 
+@mixin heart-color
+{
+    background: -webkit-linear-gradient(0deg, $color-secondary, $color-primary); 
+    background: linear-gradient(0deg, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}

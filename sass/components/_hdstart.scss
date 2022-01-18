@@ -70,5 +70,12 @@
         border: none;
         cursor: pointer;
         @include box-shadow;
+        &:hover 
+        {
+            background: linear-gradient(150deg,
+            lighten($color-secondary, 2%) 50%,
+            lighten($color-primary, 2%) 100%);
+            box-shadow: 4px 4px 4px silver;
+        }
     }
 }

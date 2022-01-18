@@ -84,9 +84,17 @@
     position: absolute;
     left: 5%;
     z-index: 1;
-    @media all and (min-width:768px) and (max-width:1921px)
+    @media all and (min-width:480px) and (max-width:767px)
+    {
+        left: 6.5%;
+    }
+    @media all and (min-width:768px) and (max-width:1023px)
     {
         left: 6%;
+    }
+    @media all and (min-width:1023px) and (max-width:1921px)
+    {
+        left: 6.5%;
     }
 }
 
