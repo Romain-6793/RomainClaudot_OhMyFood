@@ -120,19 +120,47 @@ header {
   margin-bottom: 40px;
   letter-spacing: 1px;
 }
-.bigblock__headband__icon {
-  font-size: 25px;
+
+.fullheart {
+  height: 26px;
+  width: 26px;
   position: absolute;
   top: 1px;
   left: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #f6f6f6;
+}
+.fullheart:hover .fullheart__heart2 {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.fullheart__heart1 {
+  font-size: 25px;
+  position: absolute;
+  transition: transform 1s;
+}
+.fullheart__heart2 {
+  font-size: 28px;
+  background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  opacity: 0;
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .bigblock__headband__icon {
+  .fullheart {
     left: 90%;
   }
 }
 @media all and (min-width: 991px) and (max-width: 1921px) {
-  .bigblock__headband__icon {
+  .fullheart {
     left: 92%;
   }
 }
@@ -156,22 +184,49 @@ header {
   width: 100%;
   border-radius: 18px;
   display: flex;
-  align-items: center;
+  flex-flow: column wrap;
+  justify-content: center;
   position: relative;
   margin-bottom: 14px;
   padding-left: 4%;
   box-shadow: 2px 2px 12px silver;
   cursor: pointer;
+  overflow: hidden;
+}
+.section__block:hover .checked {
+  transform: translateX(-60px);
+  transition: transform 0.7s;
+}
+.section__block:hover .checked__circle {
+  transform: rotate(360deg);
+  transition: transform 0.7s;
+}
+.section__block:hover .section__block__price {
+  transform: translateX(-200%);
+  transition: transform 0.7s;
 }
 .section__block__fulltext {
-  line-height: 0.3;
+  line-height: 1.5;
   padding-right: 22%;
+  padding-top: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  max-width: 500px;
   min-height: 50px;
+}
+@media all and (max-width: 374px) {
+  .section__block__fulltext {
+    max-width: 245px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .section__block__fulltext {
+    max-width: 275px;
+  }
+}
+.section__block__fulltext__toptext {
+  font-weight: bold;
 }
 .section__block__price {
   position: absolute;
@@ -193,11 +248,30 @@ header {
   margin-bottom: 50px;
 }
 
-/*.starter
-{
-    position: absolute; 
-    bottom: 20px;
-}*/
+.checked {
+  height: 70px;
+  width: 60px;
+  background: #99E2D0;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 18px 18px 0;
+  position: absolute;
+  right: -60px;
+}
+.checked__circle {
+  background: #ffffff;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: #99E2D0;
+  font-size: 14px;
+}
+
 .order {
   display: flex;
   justify-content: center;
@@ -266,11 +340,89 @@ header {
   color: #9356DC;
   cursor: pointer;
 }
-.footerlink:hover .footericon {
-  color: #9356DC;
-  cursor: pointer;
+
+/* ANIMATION DES BLOCKS */
+.block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10 {
+  -webkit-animation-name: animateblock;
+  animation-name: animateblock;
 }
 
+.block1 {
+  animation-duration: 1.5s;
+}
+
+.block2 {
+  animation-duration: 2s;
+}
+
+.block3 {
+  animation-duration: 2.5s;
+}
+
+.block4 {
+  animation-duration: 3s;
+}
+
+.block5 {
+  animation-duration: 3.5s;
+}
+
+.block6 {
+  animation-duration: 4s;
+}
+
+.block7 {
+  animation-duration: 4.5s;
+}
+
+.block8 {
+  animation-duration: 5s;
+}
+
+.block9 {
+  animation-duration: 5.5s;
+}
+
+.block10 {
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes animateblock {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  50% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  75% {
+    bottom: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateblock {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  50% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  75% {
+    bottom: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 .banner {
   max-height: 64px;
   display: flex;
@@ -312,10 +464,12 @@ header {
 .explore__fulltitle__title {
   padding-left: 18%;
   padding-right: 18%;
+  margin-bottom: 22px;
 }
 .explore__fulltitle__subtitle {
   padding-left: 8%;
   padding-right: 8%;
+  margin-bottom: 34px;
 }
 .explore__btn {
   height: 48px;
@@ -333,17 +487,20 @@ header {
 }
 
 .stages {
-  max-height: 442px;
+  height: 462px;
   display: flex;
   flex-flow: column wrap;
   padding-top: 35px;
   padding-left: 6%;
 }
+.stages__title {
+  width: 100%;
+}
 .stages__stage1 {
   margin-top: 25px;
 }
 .stages__stage1__bloc1 {
-  top: 550px;
+  top: 555px;
 }
 .stages__stage1__bloc2__icone1 {
   margin-left: 9.5%;
@@ -351,7 +508,7 @@ header {
   color: #7e7e7e;
 }
 .stages__stage2__bloc1 {
-  top: 648px;
+  top: 653px;
 }
 .stages__stage2__bloc2__icone2 {
   margin-left: 9%;
@@ -362,7 +519,7 @@ header {
   margin-bottom: 50px;
 }
 .stages__stage3__bloc1 {
-  top: 747px;
+  top: 752px;
 }
 .stages__stage3__bloc2__icone3 {
   margin-left: 9%;
@@ -432,9 +589,17 @@ header {
   /* Voir si le changement a opéré */
 }
 
+.bigcard {
+  height: 255px;
+  margin-bottom: 13px;
+  position: relative;
+  padding-right: 0;
+  width: 94%;
+}
+
 .main-list__card {
   height: 250px;
-  width: 94%;
+  width: 100%;
   background: #ffffff;
   border-radius: 15px;
   margin-bottom: 18px;
@@ -450,9 +615,12 @@ header {
   object-fit: cover;
 }
 .main-list__card__title {
-  line-height: 0.5;
+  line-height: 1.5;
+  padding-top: 15px;
   padding-left: 6%;
-  padding-top: 10px;
+}
+.main-list__card__title__toptitle {
+  font-weight: bolder;
 }
 .main-list__card__value-label {
   width: 78px;
@@ -486,31 +654,44 @@ header {
 
 .fullheart {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border: 1px solid black;
+  width: 27px;
+  height: 27px;
+  background: #ffffff;
+  border: none;
   display: flex;
   justify-content: center;
-  left: 83%;
+  left: 80%;
   top: 77.5%;
-  /*&:hover  Revenir sur ce problème plus tard, à mon avis c'est réglable avec FA 
-  {
-      cursor: pointer;
-  }*/
+}
+.fullheart:hover {
+  cursor: pointer;
+}
+.fullheart:hover .fullheart__heart2 {
+  opacity: 1;
+  transition: opacity 1s;
+}
+@media all and (min-width: 500px) and (max-width: 1921px) {
+  .fullheart {
+    left: 85%;
+  }
 }
 .fullheart__heart1 {
   font-size: 25px;
+  position: absolute;
+  transition: transform 1s;
 }
 .fullheart__heart2 {
-  display: none;
-  font-size: 25px;
-}
-.fullheart:hover .fullheart__heart1 {
-  display: none;
-}
-.fullheart:hover .fullheart__heart2 {
-  display: contents;
-  color: #9356DC;
+  font-size: 27px;
+  background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  bottom: 0.5px;
+  opacity: 0;
 }
 @media all and (min-width: 768px) and (max-width: 1921px) {
   .fullheart {
@@ -606,12 +787,9 @@ a:hover .main-list__card__title {
   color: #9356DC;
 }
 
-h1 {
+h1, h2 {
   font-size: 24px;
-}
-
-h2 {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .mainpage {
@@ -661,15 +839,40 @@ h2 {
   width: 120px;
   height: 120px;
   -webkit-animation: spin linear 1 forwards;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
   animation: spin linear 1 forwards;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 0.5s;
   position: absolute;
   left: 44%;
   top: 50%;
   z-index: 1;
+}
+@media all and (max-width: 374px) {
+  .loader {
+    left: 33%;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .loader {
+    left: 35%;
+  }
+}
+@media all and (min-width: 425px) and (max-width: 767px) {
+  .loader {
+    left: 36%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .loader {
+    left: 42%;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1921px) {
+  .loader {
+    left: 45.5%;
+  }
 }
 
 @-webkit-keyframes spin {

@@ -51,15 +51,13 @@ a
     }
 }
 
-h1
+h1, h2
 {
     font-size: 24px;
+    font-weight: bold;
 }
 
-h2
-{
-    font-weight: bolder;
-}
+
 
 .mainpage
 {
@@ -98,15 +96,35 @@ h2
     width: 120px;
     height: 120px;
     -webkit-animation: spin linear 1 forwards;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-delay: 0.5s;
     animation: spin linear 1 forwards;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-delay: 0.5s;
     position: absolute;
     left: 44%;
     top: 50%;
     z-index: 1;
+    @media all and (max-width: 374px)
+    {
+        left: 33%;
+    }
+    @media all and (min-width: 375px) and (max-width: 424px)
+    {
+        left: 35%;
+    }
+    @media all and (min-width: 425px) and (max-width: 767px)
+    {
+        left: 36%;
+    }
+    @media all and (min-width: 768px) and (max-width: 1023px)
+    {
+        left: 42%;
+    }
+    @media all and (min-width: 1440px) and (max-width: 1921px)
+    {
+        left: 45.5%;
+    }
   }
 
   @-webkit-keyframes spin {

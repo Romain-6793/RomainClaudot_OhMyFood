@@ -11,10 +11,19 @@
     padding-bottom: 42px; /* Voir si le changement a opéré */
 }
 
+.bigcard
+{
+    height: 255px;
+    margin-bottom: 13px;
+    position: relative;
+    padding-right: 0;
+    width: 94%;
+}
+
 .main-list__card
 {
     height: 250px;
-    width: 94%;
+    width: 100%;
     background: #ffffff;
     border-radius: 15px; 
     margin-bottom: 18px;
@@ -31,9 +40,13 @@
     }  
     &__title
     {
-        line-height: 0.5;
+        line-height: 1.5;
+        padding-top: 15px;
         padding-left: 6%;
-        padding-top: 10px;
+        &__toptitle
+        {
+            font-weight: bolder;
+        }
     }
     &__value-label
     {
@@ -66,33 +79,49 @@
 
 .fullheart
 {
-    /*
+    
     position: absolute;
-    width: 25px;
-    height: 25px; 
-    border: 1px solid black;
+    width: 27px;
+    height: 27px; 
+    background: #ffffff;
+    border: none;
     display: flex;
     justify-content: center;
-    left: 83%;
-    top: 77.5%;*/
-    /*&:hover  Revenir sur ce problème plus tard, à mon avis c'est réglable avec FA 
+    left: 80%;
+    top: 77.5%;
+    &:hover  
     {
         cursor: pointer;
-    }*/
+    }
+    &:hover .fullheart__heart2
+    {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    @media all and (min-width: 500px) and (max-width: 1921px)
+    {
+        left: 85%;
+    }
     &__heart1
     {
         font-size: 25px;
+        position: absolute;
+        transition: transform 1s;
     }
     &__heart2
     {
-        font-size: 25px;
-        background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%); 
-        background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%); 
-        background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
+        
+        font-size: 27px;
+        background:-moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+        background: -webkit-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+        background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color:transparent
+        -webkit-text-fill-color:transparent;
+        position: absolute;
+        bottom: 0.5px;
+        opacity: 0;
     }
     
     @media all and (min-width:768px) and (max-width:1921px)

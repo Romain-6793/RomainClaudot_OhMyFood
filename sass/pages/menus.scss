@@ -138,21 +138,53 @@ header
         margin-bottom: 40px;
         letter-spacing: 1px;
     }
-        &__icon
+    }
+}
+
+.fullheart
+{
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 1px;
+    left: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: #f6f6f6;
+    &:hover .fullheart__heart2
+    {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    &__heart1
     {
         font-size: 25px;
         position: absolute;
-        top: 1px;
-        left: 85%;
-        @media all and (min-width:768px) and (max-width:991px)
-        {
-            left: 90%;
-        }
-        @media all and (min-width:991px) and (max-width:1921px)
-        {
-            left: 92%;
-        }
+        transition: transform 1s;
     }
+    &__heart2
+    {
+        
+        font-size: 28px;
+        background:-moz-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+        background: -webkit-linear-gradient(top, $color-primary 0%, $color-secondary 100%); 
+        background: linear-gradient(to bottom, $color-primary 0%, $color-secondary 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color:transparent;
+        position: absolute;
+        opacity: 0;
+    }
+    @media all and (min-width:768px) and (max-width:991px)
+    {
+        left: 90%;
+    }
+    @media all and (min-width:991px) and (max-width:1921px)
+    {
+        left: 92%;
     }
 }
 
@@ -207,14 +239,26 @@ header
         }
         &__fulltext
         {
-           line-height: 0.3;
-           padding-right: 22%;
-           overflow: hidden;   
+            line-height: 1.5;
+            padding-right: 22%;
+            padding-top: 2px;
+            overflow: hidden;   
             text-overflow: ellipsis;
             white-space: nowrap;
             display: block;
-            max-width: 500px;
             min-height: 50px;
+            @media all and (max-width: 374px)
+            {
+                max-width: 245px;
+            }
+            @media all and (min-width: 375px) and (max-width: 424px)
+            {
+                max-width: 275px;
+            }
+            &__toptext
+            {
+                font-weight: bold;
+            }
         }
         &__price
         {
@@ -266,8 +310,6 @@ header
         font-size: 14px;
     }
 }
-
-
 
 .order
 {
@@ -355,11 +397,6 @@ header
         color: $color-primary;
         cursor: pointer;
     }  
-    &:hover .footericon
-    {
-        color: $color-primary;
-        cursor: pointer;
-    }
 }
 
 /* ANIMATION DES BLOCKS */
