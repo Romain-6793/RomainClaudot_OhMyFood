@@ -205,9 +205,18 @@ header {
   transform: translateX(-200%);
   transition: transform 0.7s;
 }
+@media all and (max-width: 374px) {
+  .section__block:hover .section__block__fulltext {
+    max-width: 180px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .section__block:hover .section__block__fulltext {
+    max-width: 225px;
+  }
+}
 .section__block__fulltext {
   line-height: 1.5;
-  padding-right: 22%;
   padding-top: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -217,7 +226,7 @@ header {
 }
 @media all and (max-width: 374px) {
   .section__block__fulltext {
-    max-width: 245px;
+    max-width: 220px;
   }
 }
 @media all and (min-width: 375px) and (max-width: 424px) {
@@ -259,6 +268,7 @@ header {
   border-radius: 0 18px 18px 0;
   position: absolute;
   right: -60px;
+  transition: transform 0.7s;
 }
 .checked__circle {
   background: #ffffff;
@@ -550,7 +560,7 @@ header {
     left: 6%;
   }
 }
-@media all and (min-width: 1023px) and (max-width: 1921px) {
+@media all and (min-width: 1024px) {
   .circle {
     left: 6.5%;
   }
@@ -628,28 +638,13 @@ header {
   background: #99E2D0;
   position: absolute;
   top: 5%;
-  left: 72.5%;
+  right: 5%;
   color: #008766;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 2px;
-}
-@media all and (max-width: 320px) {
-  .main-list__card__value-label {
-    left: 68%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 990px) {
-  .main-list__card__value-label {
-    left: 82.5%;
-  }
-}
-@media all and (min-width: 991px) and (max-width: 1921px) {
-  .main-list__card__value-label {
-    left: 85%;
-  }
 }
 
 .fullheart {
@@ -660,7 +655,7 @@ header {
   border: none;
   display: flex;
   justify-content: center;
-  left: 80%;
+  right: 5%;
   top: 77.5%;
 }
 .fullheart:hover {
@@ -669,11 +664,6 @@ header {
 .fullheart:hover .fullheart__heart2 {
   opacity: 1;
   transition: opacity 1s;
-}
-@media all and (min-width: 500px) and (max-width: 1921px) {
-  .fullheart {
-    left: 85%;
-  }
 }
 .fullheart__heart1 {
   font-size: 25px;
@@ -693,7 +683,7 @@ header {
   bottom: 0.5px;
   opacity: 0;
 }
-@media all and (min-width: 768px) and (max-width: 1921px) {
+@media all and (min-width: 768px) {
   .fullheart {
     left: 90%;
   }
@@ -805,10 +795,16 @@ h1, h2 {
     margin-right: 10%;
   }
 }
-@media all and (min-width: 992px) and (max-width: 1921px) {
+@media all and (min-width: 992px) and (max-width: 1439px) {
   .mainpage {
     margin-left: 15%;
     margin-right: 15%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .mainpage {
+    margin-left: 18%;
+    margin-right: 18%;
   }
 }
 
@@ -869,7 +865,7 @@ h1, h2 {
     left: 42%;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 1921px) {
+@media all and (min-width: 1440px) {
   .loader {
     left: 45.5%;
   }

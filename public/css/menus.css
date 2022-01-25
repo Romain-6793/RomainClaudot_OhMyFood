@@ -6,16 +6,8 @@
 
 body {
   max-width: 767px;
-  /* TABLETTE */
-  /*DESKTOP */
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
-  body {
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-@media all and (min-width: 991px) and (max-width: 1921px) {
+@media all and (min-width: 768px) {
   body {
     min-width: 100%;
     max-width: 100%;
@@ -43,10 +35,16 @@ a:hover .main-list__card__title {
     margin-right: 10%;
   }
 }
-@media all and (min-width: 992px) and (max-width: 1921px) {
+@media all and (min-width: 992px) and (max-width: 1439px) {
   .page {
     margin-left: 15%;
     margin-right: 15%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .page {
+    margin-left: 18%;
+    margin-right: 18%;
   }
 }
 
@@ -55,9 +53,14 @@ a:hover .main-list__card__title {
     max-width: 80%;
   }
 }
-@media all and (min-width: 992px) and (max-width: 1921px) {
+@media all and (min-width: 992px) and (max-width: 1439px) {
   .bigblock, .footer2 {
     max-width: 70%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .bigblock, .footer2 {
+    max-width: 64%;
   }
 }
 
@@ -153,12 +156,17 @@ header {
   position: absolute;
   opacity: 0;
 }
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .fullheart {
+    left: 90%;
+  }
+}
 @media all and (min-width: 768px) and (max-width: 991px) {
   .fullheart {
     left: 90%;
   }
 }
-@media all and (min-width: 991px) and (max-width: 1921px) {
+@media all and (min-width: 991px) {
   .fullheart {
     left: 92%;
   }
@@ -204,9 +212,18 @@ header {
   transform: translateX(-200%);
   transition: transform 0.7s;
 }
+@media all and (max-width: 374px) {
+  .section__block:hover .section__block__fulltext {
+    max-width: 180px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .section__block:hover .section__block__fulltext {
+    max-width: 225px;
+  }
+}
 .section__block__fulltext {
   line-height: 1.5;
-  padding-right: 22%;
   padding-top: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -216,7 +233,7 @@ header {
 }
 @media all and (max-width: 374px) {
   .section__block__fulltext {
-    max-width: 245px;
+    max-width: 220px;
   }
 }
 @media all and (min-width: 375px) and (max-width: 424px) {
@@ -233,7 +250,7 @@ header {
   top: 40px;
   font-weight: bold;
 }
-@media all and (min-width: 768px) and (max-width: 1921px) {
+@media all and (min-width: 768px) {
   .section__block__price {
     left: 90%;
   }
@@ -258,6 +275,7 @@ header {
   border-radius: 0 18px 18px 0;
   position: absolute;
   right: -60px;
+  transition: transform 0.7s;
 }
 .checked__circle {
   background: #ffffff;

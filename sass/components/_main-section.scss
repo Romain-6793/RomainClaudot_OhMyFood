@@ -55,25 +55,13 @@
         background: $color-tertiary;
         position: absolute;
         top: 5%;
-        left: 72.5%;
+        right: 5%;
         color: #008766;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 2px;
-        @media all and (max-width: 320px)
-        {
-            left: 68%;
-        }
-        @media all and (min-width:768px) and (max-width:990px)
-        {
-            left: 82.5%;  
-        }
-        @media all and (min-width:991px) and (max-width:1921px)
-        {
-            left: 85%;  
-        }
     }
 }
 
@@ -87,7 +75,7 @@
     border: none;
     display: flex;
     justify-content: center;
-    left: 80%;
+    right: 5%;
     top: 77.5%;
     &:hover  
     {
@@ -97,10 +85,6 @@
     {
         opacity: 1;
         transition: opacity 1s;
-    }
-    @media all and (min-width: 500px) and (max-width: 1921px)
-    {
-        left: 85%;
     }
     &__heart1
     {
@@ -124,7 +108,7 @@
         opacity: 0;
     }
     
-    @media all and (min-width:768px) and (max-width:1921px)
+    @media all and (min-width:768px)
     {
         left: 90%;  
     }

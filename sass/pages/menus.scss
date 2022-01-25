@@ -10,18 +10,13 @@
 body
 {
     max-width: 767px;
-    /* TABLETTE */
-    @media all and (min-width:768px) and (max-width:991px)
+
+    @media all and (min-width:768px)
     {
         min-width: 100%;
         max-width: 100%;
     }
-    /*DESKTOP */
-    @media all and (min-width:991px) and (max-width:1921px)
-    {
-        min-width: 100%;
-        max-width: 100%;
-    }
+    
 }
 
 a
@@ -50,10 +45,15 @@ a
         margin-left: 10%;
         margin-right: 10%;
     }
-    @media all and (min-width:992px) and (max-width:1921px)
+    @media all and (min-width:992px) and (max-width:1439px)
     {
         margin-left: 15%;
         margin-right: 15%;
+    }
+    @media all and (min-width:1440px)
+    {
+        margin-left: 18%;
+        margin-right: 18%;
     }
 }
 
@@ -63,9 +63,13 @@ a
     {
         max-width: 80%;
     }
-    @media all and (min-width:992px) and (max-width:1921px)
+    @media all and (min-width:992px) and (max-width:1439px)
     {
         max-width: 70%;
+    }
+    @media all and (min-width:1440px)
+    {
+        max-width: 64%;
     }
 }
 
@@ -178,11 +182,15 @@ header
         position: absolute;
         opacity: 0;
     }
+    @media all and (min-width: 320px) and (max-width: 374px)
+    {
+        left: 90%;
+    }
     @media all and (min-width:768px) and (max-width:991px)
     {
         left: 90%;
     }
-    @media all and (min-width:991px) and (max-width:1921px)
+    @media all and (min-width:991px)
     {
         left: 92%;
     }
@@ -237,10 +245,20 @@ header
             transform: translateX(-200%);
             transition: transform 0.7s;
         }
+        &:hover .section__block__fulltext
+        {
+            @media all and (max-width: 374px)
+            {
+                max-width: 180px;
+            }
+            @media all and (min-width: 375px) and (max-width: 424px)
+            {
+                max-width: 225px;
+            }
+        }
         &__fulltext
         {
             line-height: 1.5;
-            padding-right: 22%;
             padding-top: 2px;
             overflow: hidden;   
             text-overflow: ellipsis;
@@ -249,7 +267,7 @@ header
             min-height: 50px;
             @media all and (max-width: 374px)
             {
-                max-width: 245px;
+                max-width: 220px;
             }
             @media all and (min-width: 375px) and (max-width: 424px)
             {
@@ -266,7 +284,7 @@ header
             left: 85%;
             top: 40px;
             font-weight: bold;
-            @media all and (min-width:768px) and (max-width:1921px)
+            @media all and (min-width:768px)
             {
                 left: 90%;
             } 
@@ -297,6 +315,7 @@ header
     border-radius: 0 18px 18px 0;
     position: absolute;
     right: -60px;
+    transition: transform 0.7s;
     &__circle
     {
         background: #ffffff;
