@@ -135,6 +135,13 @@ header {
   border: none;
   background: #f6f6f6;
 }
+.fullheart:hover {
+  cursor: pointer;
+}
+.fullheart:hover .fullheart__heart1 {
+  opacity: 0;
+  transition: opacity 1s;
+}
 .fullheart:hover .fullheart__heart2 {
   opacity: 1;
   transition: opacity 1s;
@@ -249,6 +256,7 @@ header {
   left: 85%;
   top: 40px;
   font-weight: bold;
+  transition: transform 0.7s;
 }
 @media all and (min-width: 768px) {
   .section__block__price {

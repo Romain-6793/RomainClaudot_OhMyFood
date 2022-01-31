@@ -81,6 +81,11 @@
     {
         cursor: pointer;
     }
+    &:hover .fullheart__heart1
+    {
+        opacity: 0;
+        transition: opacity 1s;
+    }
     &:hover .fullheart__heart2
     {
         opacity: 1;

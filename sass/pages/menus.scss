@@ -157,6 +157,15 @@ header
     align-items: center;
     border: none;
     background: #f6f6f6;
+    &:hover
+    {
+        cursor: pointer;
+    }
+    &:hover .fullheart__heart1
+    {
+        opacity: 0;
+        transition: opacity 1s;
+    }
     &:hover .fullheart__heart2
     {
         opacity: 1;
@@ -284,6 +293,7 @@ header
             left: 85%;
             top: 40px;
             font-weight: bold;
+            transition: transform 0.7s;
             @media all and (min-width:768px)
             {
                 left: 90%;

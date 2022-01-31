@@ -7,16 +7,8 @@
 
 body {
   max-width: 767px;
-  /* TABLETTE */
-  /*DESKTOP */
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
-  body {
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-@media all and (min-width: 991px) and (max-width: 1921px) {
+@media all and (min-width: 768px) {
   body {
     min-width: 100%;
     max-width: 100%;
@@ -44,10 +36,16 @@ a:hover .main-list__card__title {
     margin-right: 10%;
   }
 }
-@media all and (min-width: 992px) and (max-width: 1921px) {
+@media all and (min-width: 992px) and (max-width: 1439px) {
   .page {
     margin-left: 15%;
     margin-right: 15%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .page {
+    margin-left: 18%;
+    margin-right: 18%;
   }
 }
 
@@ -56,9 +54,14 @@ a:hover .main-list__card__title {
     max-width: 80%;
   }
 }
-@media all and (min-width: 992px) and (max-width: 1921px) {
+@media all and (min-width: 992px) and (max-width: 1439px) {
   .bigblock, .footer2 {
     max-width: 70%;
+  }
+}
+@media all and (min-width: 1440px) {
+  .bigblock, .footer2 {
+    max-width: 64%;
   }
 }
 
@@ -133,6 +136,13 @@ header {
   border: none;
   background: #f6f6f6;
 }
+.fullheart:hover {
+  cursor: pointer;
+}
+.fullheart:hover .fullheart__heart1 {
+  opacity: 0;
+  transition: opacity 1s;
+}
 .fullheart:hover .fullheart__heart2 {
   opacity: 1;
   transition: opacity 1s;
@@ -154,12 +164,17 @@ header {
   position: absolute;
   opacity: 0;
 }
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .fullheart {
+    left: 90%;
+  }
+}
 @media all and (min-width: 768px) and (max-width: 991px) {
   .fullheart {
     left: 90%;
   }
 }
-@media all and (min-width: 991px) and (max-width: 1921px) {
+@media all and (min-width: 991px) {
   .fullheart {
     left: 92%;
   }
@@ -242,8 +257,9 @@ header {
   left: 85%;
   top: 40px;
   font-weight: bold;
+  transition: transform 0.7s;
 }
-@media all and (min-width: 768px) and (max-width: 1921px) {
+@media all and (min-width: 768px) {
   .section__block__price {
     left: 90%;
   }
@@ -661,6 +677,10 @@ header {
 .fullheart:hover {
   cursor: pointer;
 }
+.fullheart:hover .fullheart__heart1 {
+  opacity: 0;
+  transition: opacity 1s;
+}
 .fullheart:hover .fullheart__heart2 {
   opacity: 1;
   transition: opacity 1s;
@@ -785,9 +805,9 @@ h1, h2 {
 .mainpage {
   position: relative;
   -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 6s;
+  -webkit-animation-duration: 7s;
   animation-name: animatebottom;
-  animation-duration: 6s;
+  animation-duration: 7s;
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
   .mainpage {
@@ -810,7 +830,7 @@ h1, h2 {
 
 @-webkit-keyframes animatebottom {
   from {
-    bottom: -100px;
+    bottom: 0px;
     opacity: 0;
   }
   to {
@@ -820,7 +840,7 @@ h1, h2 {
 }
 @keyframes animatebottom {
   from {
-    bottom: -100px;
+    bottom: 0;
     opacity: 0;
   }
   to {
@@ -837,7 +857,7 @@ h1, h2 {
   -webkit-animation: spin linear 1 forwards;
   -webkit-animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
-  animation: spin linear 1 forwards;
+  animation: spin linear 1 both;
   animation-duration: 2s;
   animation-delay: 0.5s;
   position: absolute;
@@ -874,23 +894,27 @@ h1, h2 {
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
   }
   99% {
     transform: rotate(360deg);
+    opacity: 1;
   }
   100% {
-    transform: translateX(-9999px);
+    opacity: 0;
   }
 }
 @keyframes spin {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
   }
   99% {
     transform: rotate(360deg);
+    opacity: 1;
   }
   100% {
-    transform: translateX(-9999px);
+    opacity: 0;
   }
 }
 

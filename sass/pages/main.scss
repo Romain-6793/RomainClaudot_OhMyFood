@@ -1,9 +1,9 @@
-@import "pages/menus.scss";
-@import "components/hdstart.scss";
-@import "components/stages.scss";
-@import "components/main-section.scss";
-@import "components/footer.scss";
-@import "variables/variables.scss";
+@import "menus.scss";
+@import "../components/hdstart.scss";
+@import "../components/stages.scss";
+@import "../components/main-section.scss";
+@import "../components/footer.scss";
+@import "../variables/variables.scss";
 
 /* GENERAL */
 
@@ -61,9 +61,9 @@ h1, h2
 {
     position: relative;
     -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 6s;
+    -webkit-animation-duration: 7s;
     animation-name: animatebottom;
-    animation-duration: 6s;
+    animation-duration: 7s;
     @media all and (min-width:768px) and (max-width:991px)
     {
         margin-left: 10%;
@@ -82,12 +82,12 @@ h1, h2
 }
 
 @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 } 
+    from { bottom: 0px; opacity:0 } 
     to { bottom:0px; opacity:1 }
   }
   
   @keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
+    from{ bottom:0; opacity:0 } 
     to{ bottom:0; opacity:1 }
   }
 
@@ -101,7 +101,7 @@ h1, h2
     -webkit-animation: spin linear 1 forwards;
     -webkit-animation-duration: 2s;
     -webkit-animation-delay: 0.5s;
-    animation: spin linear 1 forwards;
+    animation: spin linear 1 both;
     animation-duration: 2s;
     animation-delay: 0.5s;
     position: absolute;
@@ -131,13 +131,13 @@ h1, h2
   }
 
   @-webkit-keyframes spin {
-    0% { transform: rotate(0deg); }
-    99% { transform: rotate(360deg); }
-    100% { transform: translateX(-9999px); }
+    0% { transform: rotate(0deg); opacity: 1; }
+    99% { transform: rotate(360deg);  opacity: 1; }
+    100% { opacity: 0; }
   }
 
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    99% { transform: rotate(360deg); }
-    100% { transform: translateX(-9999px); }
+    0% { transform: rotate(0deg); opacity: 1; }
+    99% { transform: rotate(360deg); opacity: 1; }
+    100% { opacity: 0; }
   }
